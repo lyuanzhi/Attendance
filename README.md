@@ -14,3 +14,9 @@ Node.js: v18.20.2
 2. ```sudo apt update```
 3. ```sudo apt install nodejs -y```
 4. ```npm install -g pnpm```
+
+## Run
+```pnpm run serve```
+
+## Build
+```pnpm run build```
