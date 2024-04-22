@@ -16,7 +16,7 @@ Node.js: v18.20.2
 4. ```npm install -g pnpm```
 
 ## Run
-```pnpm run serve```
+```pnpm start```
 
 ## Build
 ```pnpm run build```
