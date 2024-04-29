@@ -2,7 +2,7 @@
     <div id="scan">
         <h1 style="width: 100%; text-align: center; margin-top: 50px; margin-bottom: 50px;">Duke Attendance Scan</h1>
         <div class="form">
-            <p v-if="msg">{{ msg }}</p>
+            <p v-if="msg">{{ msg + " (" + distance + " m)" + " (" + accuracy + ")" }}</p>
             <div>
                 <div class="label">Enter your netID</div>
                 <input class="input" type="text" v-model="netId">
@@ -29,7 +29,8 @@ export default {
             netId: "",
             distance: null,
             showScan: false,
-            msg: "Scan QR Code"
+            msg: "Scan QR Code",
+            accuracy: 0
         }
     },
     methods: {
@@ -83,11 +84,12 @@ export default {
                         let distance = this.calculateDistance(position.coords.latitude, position.coords.longitude,
                             36.001427, -78.938232);
                         this.distance = distance.toFixed(2);
+                        this.accuracy = position.coords.accuracy;
                         // console.log(this.distance)
-                        if (this.distance < 2000 || position.coords.accuracy > 100) {
+                        if (this.distance < 100 || position.coords.accuracy > 100) {
                             this.showScan = true;
                         } else {
-                            this.msg = "You Should In The Class Room! (" + this.distance + " m)"
+                            this.msg = "You Should In The Class Room!"
                         }
                     },
                     error => {

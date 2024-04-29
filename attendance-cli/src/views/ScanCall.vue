@@ -64,7 +64,7 @@ export default {
                 this.updateQrCode()
                 this.intervalId = setInterval(() => {
                     this.updateQrCode()
-                }, 1000)
+                }, 3000)
             } else {
                 clearInterval(this.intervalId)
                 this.generateQRCode("You Are Too Late!")
