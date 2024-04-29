@@ -84,10 +84,10 @@ export default {
                             36.001427, -78.938232);
                         this.distance = distance.toFixed(2);
                         // console.log(this.distance)
-                        if (this.distance < 200 || position.coords.accuracy > 100) {
+                        if (this.distance < 2000 || position.coords.accuracy > 100) {
                             this.showScan = true;
                         } else {
-                            this.msg = "You Should In The Class Room!"
+                            this.msg = "You Should In The Class Room! (" + this.distance + " m)"
                         }
                     },
                     error => {
