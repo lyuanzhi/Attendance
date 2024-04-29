@@ -90,7 +90,7 @@ export default {
                         let distance = this.calculateDistance(position.coords.latitude, position.coords.longitude,
                             36.001427, -78.938232);
                         this.distance = distance.toFixed(2);
-                        this.accuracy = position.coords.accuracy;
+                        this.accuracy = position.coords.accuracy.toFixed(2);
                         this.latitude = position.coords.latitude.toFixed(6);
                         this.longitude = position.coords.longitude.toFixed(6);
                         // console.log(this.distance)
