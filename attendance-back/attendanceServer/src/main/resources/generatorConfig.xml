@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <property name="autoDelimitKeywords" value="true"/>
+        <property name="javaFileEncoding" value="UTF-8"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="edu.duke.ece651.team7.attendanceServer.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://lyuanzhi.com:3306/CheckInDB?serverTimezone=GMT"
+                        userId="root"
+                        password="Eshxcpqw.123">
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="edu.duke.ece651.team7.attendanceServer.POJO" targetProject="projectTest/attendanceServer/src/main/java"/>
+        <sqlMapGenerator targetPackage="Mapper" targetProject="projectTest/attendanceServer/src/main/resources"/>
+        <javaClientGenerator targetPackage="edu.duke.ece651.team7.attendanceServer.Mapper" targetProject="projectTest/attendanceServer/src/main/java"
+                             type="XMLMAPPER"/>
+
+		<table tableName="%" delimitIdentifiers="true">
+        </table>
+    </context>
+</generatorConfiguration>

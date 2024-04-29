@@ -1,0 +1,33 @@
+{
+    "name": "attendance",
+    "version": "1.0.0",
+    "description": "attendance management system",
+    "author": "lyuanzhi",
+    "private": false,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build"
+    },
+    "dependencies": {
+        "axios": "^0.21.2",
+        "core-js": "^3.6.5",
+        "echarts": "^4.7.0",
+        "element-ui": "^2.13.0",
+        "file-saver": "^2.0.2",
+        "less": "^3.11.1",
+        "less-loader": "^5.0.0",
+        "lodash": "^4.17.20",
+        "vue": "^2.6.11",
+        "vue-count-to": "^1.0.13",
+        "vue-router": "^3.2.0",
+        "vuex": "^3.5.1",
+        "qrcode":"^1.5.3",
+        "vue-qrcode-reader": "^3.1.1"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^4.5.0",
+        "@vue/cli-service": "^4.5.0",
+        "compression-webpack-plugin": "^6.0.5",
+        "vue-template-compiler": "^2.6.11"
+    }
+}

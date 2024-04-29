@@ -1,0 +1,46 @@
+.el-button {
+  &.is-disabled {
+    cursor: default!important;
+  }
+  &.is-disabled {
+    &:focus,
+    &:hover {
+      cursor: default!important;
+    }
+  }
+}
+
+.el-submenu {
+  >.el-submenu__title {
+    i {
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+}
+
+.el-card {
+  .el-card__header {
+    .title {
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+  .el-card__body {
+    .content-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.el-transfer-panel__body {
+  height: 280px;
+  .el-transfer-panel__list {
+    &.is-filterable {
+      height: 230px;
+    }
+  }
+}
