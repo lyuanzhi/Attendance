@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.duke.ece651.team7.attendanceServer.Mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="edu.duke.ece651.team7.attendanceServer.POJO.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="netId" jdbcType="VARCHAR" property="netid" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="displayName" jdbcType="VARCHAR" property="displayname" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+</mapper>
