@@ -36,8 +36,8 @@ export default {
     data() {
         return {
             loginForm: {
-                netID: 'yl954',
-                password: 'ece651',
+                netID: '',
+                password: '',
                 isFaculty: true
             },
             loginRules: {
