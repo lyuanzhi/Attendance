@@ -54,10 +54,10 @@ server:
     path: /error # 默认为 /error
     whitelabel:
       enabled: false #默认为 true，现在把它禁用
-#   ssl:
-#     key-store: classpath:lyuanzhi.com.jks
-#     key-store-password: pt3ck07bx45
-#     key-store-type: JKS
+  ssl:
+    key-store: classpath:lyuanzhi.com.jks
+    key-store-password: pt3ck07bx45
+    key-store-type: JKS
 
 # war包配置到云服务器上：nohup java -jar blog.war &
 # 查看 war包运行进程：lsof -i:80 或 ps aux|grep lyzdemo.war

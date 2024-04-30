@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // const serverURL = 'http://192.168.1.7:8090'
-const serverURL = 'http://lyuanzhi.com:8090'
+const serverURL = 'https://lyuanzhi.com:8090'
 
 export function login(data) {
     return axios({
