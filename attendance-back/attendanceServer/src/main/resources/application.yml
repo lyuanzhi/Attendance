@@ -18,7 +18,7 @@ spring:
       maximumPoolSize: 4
   redis:
     database: 0 #redis数据库索引（默认为0）
-    host: 34.41.117.214 #redis服务器地址
+    host: 35.226.228.78 #redis服务器地址
     port: 6379 #redis服务器连接端口
     password: lyuanzhi #redis服务器连接密码
     jedis:
