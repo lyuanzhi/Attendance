@@ -75,6 +75,9 @@ export default {
             this.loginForm.netID = localStorage.getItem('netID')
             this.loginForm.password = localStorage.getItem('password')
             this.loginForm.isFaculty = localStorage.getItem('isFaculty')
+            console.log(localStorage.getItem('isFaculty'))
+            console.log(localStorage.getItem('isFaculty')==true)
+            this.loginForm.isFaculty = true
             this.checkboxKey += 1
         }
     },
