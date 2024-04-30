@@ -34,14 +34,16 @@ Redis: 3.2.12
 Just follow the instructions in ```./.github/workflows``` and ```./attendance-back/Dockerfile```.
 
 ## Node.js Run and Build
-```npm run serve```
-```pnpm run build```
+1. ```npm run serve```
+2. ```pnpm run build```
 
 ## Gradle Run and Build
-```./gradlew bootrun```
-```./gradlew bootjar```
+1. ```./gradlew bootrun```
+2. ```./gradlew bootjar```
 
 ## Deploy
+Most things are automated through CI/CD workflows.
+
 ### Front-end: GitHub Pages
 There are two things to note:
 1. You should give the workflow permission to create a new branch.
