@@ -94,7 +94,7 @@ export default {
                         this.latitude = position.coords.latitude.toFixed(6);
                         this.longitude = position.coords.longitude.toFixed(6);
                         // console.log(this.distance)
-                        if (this.distance < 100 || position.coords.accuracy > 100) {
+                        if (this.distance < 300 || position.coords.accuracy > 100) {
                             this.showScan = true;
                         } else {
                             this.msg = "You Should In The Class Room!"
