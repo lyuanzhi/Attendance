@@ -14,7 +14,7 @@
                         prefix-icon="el-icon-lock" @keyup.enter.native="handleLogin" />
                 </el-form-item>
                 <el-form-item v-if="showCheckbox">
-                    <el-checkbox v-model="loginForm.isFaculty">Faculty</el-checkbox>
+                    <el-checkbox v-model="loginForm.isFaculty" :key="checkboxKey">Faculty</el-checkbox>
                 </el-form-item>
                 <el-form-item>
                     <el-button :loading="loading" size="small" type="primary" style="width:100%; font-size: 20px;"
@@ -46,7 +46,8 @@ export default {
             },
             loading: false,
             redirect: undefined,
-            showCheckbox: true
+            showCheckbox: true,
+            checkboxKey: 0
         }
     },
     watch: {
@@ -74,7 +75,7 @@ export default {
             this.loginForm.netID = localStorage.getItem('netID')
             this.loginForm.password = localStorage.getItem('password')
             this.loginForm.isFaculty = localStorage.getItem('isFaculty')
-            console.log(this.loginForm.isFaculty)
+            this.checkboxKey += 1
         }
     },
     methods: {
