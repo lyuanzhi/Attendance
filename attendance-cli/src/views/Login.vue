@@ -63,6 +63,13 @@ export default {
         this.$store.state.isFaculty = true
         this.$store.state.curNetID = null
     },
+    mounted() {
+        if (localStorage.getItem('netID') && localStorage.getItem('password') && localStorage.getItem('isFaculty')) {
+            this.loginForm.netID = localStorage.getItem('netID')
+            this.loginForm.password = localStorage.getItem('password')
+            this.loginForm.isFaculty = localStorage.getItem('isFaculty')
+        }
+    },
     methods: {
         handleLogin() {
             this.$refs.loginForm.validate(valid => {
@@ -77,11 +84,19 @@ export default {
                         // console.log(res.data.data)
                         if (res.data.code == 200 && res.data.data != null) {
                             this.$store.state.ISLOGIN = true
-                            this.$store.state.isFaculty = this.loginForm.isFaculty
+                            this.$store.state.isFaculty = data.isFaculty
                             this.$store.state.curNetID = res.data.data.netid
                             this.$store.state.sections = res.data.data.sections
+                            localStorage.setItem('netID', data.netID)
+                            localStorage.setItem('password', data.password)
+                            localStorage.setItem('isFaculty', data.isFaculty)
                             this.loading = false
-                            this.$router.push({ path: this.redirect || '/home' })
+                            let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+                            if (isMobile) {
+                                this.$router.push({ path: this.redirect || '/scan' })
+                            } else {
+                                this.$router.push({ path: this.redirect || '/home' })
+                            }
                         } else {
                             this.loading = false
                             notify('Wrong Password!')

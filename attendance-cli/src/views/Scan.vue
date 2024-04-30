@@ -114,6 +114,11 @@ export default {
             }
         }
     },
+    beforeCreate() {
+        if (this.$store.state.ISLOGIN == false) {
+            this.$router.push({ path: '/login' })
+        }
+    },
     mounted() {
         this.getLocation()
     }
