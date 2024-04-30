@@ -3,9 +3,11 @@ A school (Duke) attendance system built with Vue.
 
 ## Demo
 ### Faculty / Student Dashboard (on PC)
-[https://lyuanzhi.github.io/Attendance](https://lyuanzhi.github.io/Attendance)
+[https://lyuanzhi.github.io/Attendance](https://lyuanzhi.github.io/Attendance) (Open in PC)
 ### Student QR Code Scan (on Mobile)
-[https://lyuanzhi.github.io/Attendance/#/scan](https://lyuanzhi.github.io/Attendance/#/scan)
+[https://lyuanzhi.github.io/Attendance](https://lyuanzhi.github.io/Attendance) (Open in Mobile)
+
+**The system will detect the user's device. If it is a mobile device, it will display Student QR Code Scan Page; If it is a PC, it will display Dashboard Page.**
 
 ## Tech Stack
 1. Docker
