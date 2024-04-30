@@ -20,7 +20,7 @@ export default {
       vnodes.push(<i class={iconName}></i>)
     }
     if (title) {
-      vnodes.push(<span slot='title' style="font-size:16px;font-weight:bold;font-family:fantasy;">{title}</span>)
+      vnodes.push(<span slot='title' style="font-size:16px;font-weight:bold;">{title}</span>)
     }
     return vnodes
   }
