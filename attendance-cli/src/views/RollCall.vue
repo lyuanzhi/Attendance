@@ -239,7 +239,6 @@ export default {
     .export-data {
         display: flex;
         justify-content: space-around;
-        width: 300px;
         margin: 0 auto 30px;
     }
 

@@ -2,64 +2,55 @@ spring:
   application:
     name: attendanceSrv
   profiles:
-    active: test #默认为远程测试环境
+    active: test
   servlet:
     multipart:
-      enabled: true #开启文件上传
-      max-file-size: 10MB #限制文件上传大小为10M
-  # 使用 Springboot 默认的 HikariCP 连接池
+      enabled: true
+      max-file-size: 10MB
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://lyuanzhi.com:3306/CheckInDB?serverTimezone=GMT
     username: root
     password: Eshxcpqw.123
     hikari:
-      maxLifetime: 65000 #一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟，建议设置比数据库超时时长少30秒以上
+      maxLifetime: 65000
       maximumPoolSize: 4
   redis:
-    database: 0 #redis数据库索引（默认为0）
-    host: 35.226.228.78 #redis服务器地址
-    port: 6379 #redis服务器连接端口
-    password: lyuanzhi #redis服务器连接密码
+    database: 0
+    host: 35.226.228.78
+    port: 6379
+    password: lyuanzhi
     jedis:
       pool:
-        max-active: 1000 #连接池最大连接数（-1代表没限制）
-        max-wait: -1 #连接池最大阻塞等待时间
-        max-idle: 10 #连接池中的最大空闲连接数
-        min-idle: 2 #连接池中的最小空闲连接数
-    timeout: 1000 #连接超时时间（毫秒）
+        max-active: 1000
+        max-wait: -1
+        max-idle: 10
+        min-idle: 2
+    timeout: 1000
   web:
     resources:
       static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/public/
 
-# mybatis 配置
 mybatis:
   mapper-locations:
     - classpath*:Mapper/*.xml
   type-aliases-package: edu.duke.ece651.team7.attendanceServer.POJO
 
-# 通用 Mapper 配置
 mapper:
   mappers: edu.duke.ece651.team7.attendanceServer.MyMapper
   not-empty: false
   identity: MYSQL
 
-# Server 服务端配置
 server:
   port: 8090
   servlet:
     session:
-      timeout: 60 #session 最大超时时间（分钟），默认30分钟
+      timeout: 60
   error:
-    path: /error # 默认为 /error
+    path: /error
     whitelabel:
-      enabled: false #默认为 true，现在把它禁用
+      enabled: false
   ssl:
     key-store: classpath:lyuanzhi.com.jks
     key-store-password: pt3ck07bx45
     key-store-type: JKS
-
-# war包配置到云服务器上：nohup java -jar blog.war &
-# 查看 war包运行进程：lsof -i:80 或 ps aux|grep lyzdemo.war
-# 关闭进程：kill -9 进程号（-9表示强制关闭进程）
-
