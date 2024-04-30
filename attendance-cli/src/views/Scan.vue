@@ -2,15 +2,12 @@
     <div id="scan">
         <h1 style="width: 100%; text-align: center; margin-top: 50px; margin-bottom: 50px;">Duke Attendance Scan</h1>
         <div class="form">
+            <p>{{ "netID: " +  this.$store.state.curNetID}}</p>
             <p>{{ "longitude: " + longitude }}</p>
             <p>{{ "latitude: " + latitude }}</p>
             <p>{{ "distance: " + distance + " m" }}</p>
             <p>{{ "tolerance: " + accuracy + " m" }}</p>
             <p v-if="msg" style="color:#A40000;">{{ msg }}</p>
-            <div>
-                <div class="label">Enter your netID</div>
-                <input class="input" type="text" v-model="netId">
-            </div>
             <div v-if="showScan">
                 <QrcodeStream @decode="handleScan" :delay="300" :facingMode="'environment'">
                     <video id="video" ref="video" width="100%" height="auto" autoplay></video>
@@ -30,7 +27,6 @@ export default {
     },
     data() {
         return {
-            netId: "",
             distance: null,
             showScan: false,
             msg: "Scan QR Code",
@@ -64,7 +60,7 @@ export default {
             this.showScan = false
             let data = {
                 sectionId: json.sectionId,
-                netId: this.netId,
+                netId: this.$store.state.curNetID,
                 date: json.date,
                 code: json.code
             }

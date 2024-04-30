@@ -13,7 +13,7 @@
                     <el-input v-model="loginForm.password" type="password" auto-complete="off" placeholder="password"
                         prefix-icon="el-icon-lock" @keyup.enter.native="handleLogin" />
                 </el-form-item>
-                <el-form-item>
+                <el-form-item v-if="showCheckbox">
                     <el-checkbox v-model="loginForm.isFaculty">Faculty</el-checkbox>
                 </el-form-item>
                 <el-form-item>
@@ -45,7 +45,8 @@ export default {
                 password: [{ required: true, trigger: 'blur', message: 'Password cannot be empty!' }]
             },
             loading: false,
-            redirect: undefined
+            redirect: undefined,
+            showCheckbox: true
         }
     },
     watch: {
@@ -64,10 +65,16 @@ export default {
         this.$store.state.curNetID = null
     },
     mounted() {
+        let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+        if (isMobile) {
+            this.loginForm.isFaculty = false
+            this.showCheckbox = false
+        }
         if (localStorage.getItem('netID') && localStorage.getItem('password') && localStorage.getItem('isFaculty')) {
             this.loginForm.netID = localStorage.getItem('netID')
             this.loginForm.password = localStorage.getItem('password')
             this.loginForm.isFaculty = localStorage.getItem('isFaculty')
+            console.log(this.loginForm.isFaculty)
         }
     },
     methods: {
@@ -125,7 +132,7 @@ export default {
     background-image: url(../assets/img/loginBack.jpg);
 
     .form-box {
-        width: 320px;
+        width: 280px;
         padding: 16px 30px;
         background: #fff;
         border-radius: 4px;
