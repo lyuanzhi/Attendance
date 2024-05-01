@@ -9,9 +9,6 @@ A school (Duke) attendance system built with Vue.
 
 **The system will detect the user's device. If it is a mobile device, it will display Student QR Code Scan Page; If it is a PC, it will display Dashboard Page.**
 
-## Demo Video - Avoid Cheating
-<video src="imgs/avoidcheating.mp4" autoplay="true" controls="controls" width="800" height="600"></video>
-
 ## Tech Stack
 1. Docker
 2. MySQL
