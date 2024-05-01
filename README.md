@@ -35,7 +35,7 @@ Just follow the instructions in ```./.github/workflows``` and ```./attendance-ba
 
 ## Node.js Run and Build
 1. ```npm run serve```
-2. ```pnpm run build```
+2. ```npm run build```
 
 ## Gradle Run and Build
 1. ```./gradlew bootrun```
