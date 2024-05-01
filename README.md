@@ -7,6 +7,9 @@ A school (Duke) attendance system built with Vue.
 ### Student QR Code Scan (on Mobile)
 [https://lyuanzhi.github.io/Attendance](https://lyuanzhi.github.io/Attendance) (Open in Mobile)
 
+## Demo Video - Avoid Cheating
+![](imgs/avoidcheating.mp4)
+
 **The system will detect the user's device. If it is a mobile device, it will display Student QR Code Scan Page; If it is a PC, it will display Dashboard Page.**
 
 ## Tech Stack

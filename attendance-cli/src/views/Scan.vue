@@ -91,7 +91,7 @@ export default {
                         this.latitude = position.coords.latitude.toFixed(6);
                         this.longitude = position.coords.longitude.toFixed(6);
                         // console.log(this.distance)
-                        if (this.distance < 30 || this.disableLoc) {
+                        if (this.distance < 100 || this.disableLoc) {
                             this.showScan = true;
                         } else {
                             this.msg = "You Should In The Class Room!"
