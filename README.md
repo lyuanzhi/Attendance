@@ -23,7 +23,7 @@ A school (Duke) attendance system built with Vue.
 ```
 Java: 17.0.10
 Gradle: 7.3.3
-Node.js: v18.20.2
+Node.js: 14.x
 MySQL: 8.0.34
 Redis: 3.2.12
 ./attendance-back/build.gradle
