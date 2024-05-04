@@ -17,7 +17,7 @@ spring:
       maximumPoolSize: 4
   redis:
     database: 0
-    host: 35.226.228.78
+    host: lyuanzhi.com
     port: 6379
     password: lyuanzhi
     jedis:
