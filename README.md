@@ -7,11 +7,11 @@ A school (Duke) attendance system built with Vue.
 ### Student QR Code Scan (on Mobile)
 [https://lyuanzhi.github.io/Attendance](https://lyuanzhi.github.io/Attendance) (Open in Mobile)
 ```
-Faculty:
+Faculty Account:
 netID: lg222
 password: 1
 ------------
-Student:
+Student Account:
 netID: nh666
 password: 1
 ```
