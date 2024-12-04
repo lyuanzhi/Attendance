@@ -52,5 +52,5 @@ server:
       enabled: false
   ssl:
     key-store: classpath:lyuanzhi.com.jks
-    key-store-password: pt3ck07bx45
+    key-store-password: ej9073xz7760
     key-store-type: JKS
